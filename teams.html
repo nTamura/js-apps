@@ -14,74 +14,83 @@
     <script src='./js/teams.js'></script>
   </head>
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">Javascript Apps</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="temperature.html">C/F Converter</a></li>
-            <li><a href="tips.html">Gratuity Calc </a></li>
-            <li class="active"><a href="teams.html">Random Teams</a></li>
-          </ul>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Javascript Apps</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="temperature.html">C/F Converter</a></li>
+          <li><a href="tips.html">Gratuity Calc </a></li>
+          <li class="active"><a href="teams.html">Random Teams</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <h1>
+      <i class="fa fa-users" aria-hidden="true"></i>
+      Random Team Generator
+    </h1>
+
+    <hr>
+
+    <p>Insert names, seperated by space and commas: </p>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Randomizer</h4>
+
+        <div class="well well-sm">
+
+          <form class=""  action="teams.html" method="post">
+
+          <div class="form-group">
+            <label for="inputNums">Number of Teams:</label>
+            <select class="form-control" id="inputNums">
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="inputNames">Team Members:</label>
+            <textarea class="form-control" name="name" id="inputNames">Anna, Danielle, Serkan, Kenneth, Kyle, Marco, Anthony, Sean, Simon, Ramandeep, Elise</textarea>
+          </div>
+
+          <button type="button" name="button" id='teamButton' class='btn btn-primary pull-right'>Generate!</button>
+          <div class="clearfix"></div>
+        </form>
         </div>
       </div>
-    </nav>
 
-    <div class="container">
-
-      <h1>
-        <i class="fa fa-users" aria-hidden="true"></i>
-        Random Team Generator</h1>
-      <hr>
-
-      <p>Insert names, seperated by space and commas: </p>
-
-
-      <div class="row">
-        <div class="col-md-6">
-          <h4>Randomizer</h4>
-
-<div class="well well-sm">
-
-<div class="form-group">
-  <label for="sel1">Number of Teams:</label>
-  <select class="form-control" id="sel1">
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-  </select>
-</div>
-
-<div class="form-group">
-<label for="sel1">Team Members:</label>
-          <textarea class="form-control" name="name">nic, bob, jes, jul, jon, yak, cat, kels, bra, howl, mark</textarea>
-        </div>
+      <div class="col-md-6">
+        <h4>Results</h4>
+        <div class="well well-sm">
+        <div id="teamOutput"></div>
       </div>
-
     </div>
 
+  </div>
+  </div>
+</div>
 
-        <div class="col-md-6">
-          <h4>Results</h4>
-          <div class="well well-sm">
+<script type="text/javascript">
 
-          <ul>
-            <li>name </li>
-            <li>name </li>
-            <li>name </li>
-            <li>name </li>
-          </ul>
-        </div>
-      </div>
-  </body>
+</script>
+
+</body>
 </html>
