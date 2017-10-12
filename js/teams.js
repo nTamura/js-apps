@@ -1,6 +1,7 @@
 $(function(){
 
   $( "#teamButton" ).click(function() {
+    let teamOutput = $('#teamOutput');
     let inputNames = $('#inputNames').val();
     let inputNums = $('#inputNums').val();
         inputNames = inputNames.split(', ')
@@ -33,13 +34,18 @@ $(function(){
             teamCounter = 0;
         }
       }
-      // for(t of team){
-      //   $('#teamOutput').html(`<p>${Object[team]}</p>`);
-      // }
-      console.log(team);
-      // console.log(Object(team));
-    }
 
+      for (let key of Object.keys(team)) {
+        console.log(key, team[key]);
+
+        teamOutput.append('<h3 class="team-name">' + key + '</h3><ul>');
+        for(var j = 0; j < team[key].length; j++) {
+          teamOutput.append('<li>' + team[key][j] + '</li>');
+          // console.log(team[key[j]]);
+          teamOutput.append('</ul>');
+        }
+      }
+    }
 
 
   });
