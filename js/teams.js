@@ -1,4 +1,4 @@
-$(function(){
+  $(function(){
 
   $( "#teamButton" ).click(function() {
     let teamOutput = $('#teamOutput');
@@ -7,7 +7,6 @@ $(function(){
         inputNames = inputNames.split(', ')
         inputNames = shuffle(inputNames);
         teamRandomizer(inputNames, inputNums)
-        // renderHtml(teamRandomizer)
 
     function shuffle(arr) {
       let currentIndex = arr.length, temporaryValue, randomIndex;
@@ -27,25 +26,23 @@ $(function(){
 
       for (let i=0; i<names.length; ++i) {
         if (!team["Team" + teamCounter]) {
-            team["Team" + teamCounter] = [];
+          team["Team" + teamCounter] = [];
         }
         team["Team" + teamCounter].push(names[i]);
         if (++teamCounter == teamCount) {
-            teamCounter = 0;
+          teamCounter = 0;
         }
       }
 
       for (let key of Object.keys(team)) {
-        console.log(key, team[key]);
-
         teamOutput.append('<h3 class="team-name">' + key + '</h3><ul>');
         for(var j = 0; j < team[key].length; j++) {
           teamOutput.append('<li>' + team[key][j] + '</li>');
-          // console.log(team[key[j]]);
           teamOutput.append('</ul>');
         }
+        console.log(key, team[key]);
       }
-    }
+    };
 
 
   });
