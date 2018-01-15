@@ -25,7 +25,7 @@
       let teamCounter = 0;
 
       for (let i=0; i<names.length; ++i) {
-        if (!team["Team" + teamCounter]) {
+        if (!team["Team" + teamCounter + 1]) {
           team["Team" + teamCounter] = [];
         }
         team["Team" + teamCounter].push(names[i]);
